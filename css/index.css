@@ -142,23 +142,113 @@ body {
 .left-side {
   width: 40%;
   height: 100%;
+  background-color: #2d2d2b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+.left-side header {
+  width: 95%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 3%;
 }
 .left-side header img {
   width: 30%;
   border-radius: 100%;
 }
 .left-side header h1 {
-  font-size: 5rem;
+  font-size: 6rem;
+  color: white;
+}
+@media (max-width: 500px) {
+  .left-side header h1 {
+    font-size: 2.5rem;
+  }
 }
 .left-side header h2 {
-  font-size: 2rem;
+  font-size: 3rem;
+  color: #a1dfe2;
+}
+@media (max-width: 500px) {
+  .left-side header h2 {
+    font-size: 1.5rem;
+  }
+}
+.left-side footer {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 4%;
+  width: 95%;
+}
+@media (max-width: 500px) {
+  .left-side footer {
+    height: 50%;
+  }
 }
 .left-side footer h2 {
-  font-size: 2rem;
+  font-size: 3rem;
+  color: #a1dfe2;
+}
+@media (max-width: 500px) {
+  .left-side footer h2 {
+    font-size: 1.5rem;
+  }
 }
 .left-side footer p {
-  font-size: 1rem;
+  font-size: 2rem;
+  color: white;
+  line-height: 1.5;
+}
+@media (max-width: 500px) {
+  .left-side footer p {
+    font-size: 1.2rem;
+  }
+}
+.left-side footer nav a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  .left-side footer nav a {
+    font-size: 1.2rem;
+  }
 }
 .right-side {
   width: 60%;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.right-side h2 {
+  font-size: 3rem;
+  color: #2d2d2b;
+  background-color: #a1dfe2;
+}
+@media (max-width: 500px) {
+  .right-side h2 {
+    font-size: 2rem;
+  }
+}
+.right-side p {
+  font-size: 2rem;
+  color: #2d2d2b;
+  line-height: 1.5;
+}
+.right-side ul {
+  font-size: 2rem;
+  color: #2d2d2b;
 }

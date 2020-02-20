@@ -47,6 +47,24 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+//variables
+@heading-font: 'Trocchi', serif;
+@main-font:'Source Sans Pro', sans-serif;
+@black-font:#2d2d2b;
+@main-font: #a1dfe2;
+
+//mixins
+.space-evenly(){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.space-around(){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -67,40 +85,110 @@ html, body {
 .left-side {
 	width: 40%;
 	height: 100%;
+	background-color:@black-font;
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
+	
+	@media (max-width:600px) {	
+		.space-evenly();
+	
+	}
 
 	header {
-		
+		width:95%;
+		height:40%;
+		.space-evenly();
+		margin:3%;
+
+
+
 		img {
 			width: 30%;
 			border-radius: 100%;
+
 		}//end of img
 		
 		h1 {
-			font-size: 5rem;
+			font-size: 6rem;
+			color:white;
+			@media (max-width:600px) {
+				font-size: 2.5rem;
+			}
 		}//end of h1
 		
 		h2 {
-			font-size: 2rem;
-		}// end of h2
+			font-size: 3rem;
+			color:@main-font;
+			@media (max-width:600px) {
+				font-size:1.5rem;
+			}
+		}// end of h2	
 	}//end of header
 
 	footer {
+		height:50%;
+		.space-evenly();
+		margin:4%;
+		width:95%;
+		@media (max-width:600px) {
+			height: 50%;
+		}
+
 		
 		h2 {
-			font-size: 2rem;
+			font-size: 3rem;
+			color:@main-font;
+			@media (max-width:600px) {
+				font-size:1.5rem;
+			}
 		}// end of h2
 		
 		p {
-			font-size: 1rem;
+			font-size: 2rem;
+			color:white;
+			line-height: 1.5;
+			
+			@media (max-width:600px) {
+				font-size:1.2rem;
+			}
 		}// end of p
+
+		nav a {
+			font-size: 2rem;
+			color:white;
+			text-decoration: none;
+			@media (max-width:600px) {
+				font-size:1.2rem;
+			}
+		}//end of nav anchors
 	}//end of footer
 }//end of left side
 
 //Right section of the page
 .right-side {
 	width: 60%;
-
+	padding: 4%;
+	.space-around();
 	h2 {
-	}
-}//end of right side
+		font-size: 3rem;
+		color:@black-font;
+		background-color: @main-font;
 
+		@media (max-width:600px) {
+			font-size:2rem;
+		}
+	}
+	p {
+		font-size: 2rem;
+		color:@black-font;
+		line-height: 1.5;	
+	}
+
+	ul {
+		font-size: 2rem;
+		color:@black-font;
+	}
+
+
+}//end of right side
